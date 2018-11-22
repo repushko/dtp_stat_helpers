@@ -1,4 +1,4 @@
-# Helpers for data loaded from stat.gibdd.ru
+# Helpers for data loaded from http://stat.gibdd.ru
 
 | Before             |  After |
 :-------------------------:|:-------------------------:
