@@ -63,7 +63,8 @@ G = ox.graph_from_place(city_and_country, network_type='drive')
 data = pd.read_csv(csv)
 data['projection_lat'] = 0
 data['projection_lon'] = 0
-data.head()
+
+print("Items for processing: ", len(data))
 
 for index, row in tqdm(data.iterrows()):
     try:
