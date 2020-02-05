@@ -35,12 +35,12 @@ def calculate_projection(p, ls):
 
 # Get nearest projection of point
 def nearest_projection(G, point):
-    nearest_node = ox.utils.get_nearest_node(G, point, method='haversine', return_dist=False)
-    nearest_node_info = G.node[nearest_node]
+    nearest_node = ox.geo_utils.get_nearest_node(G, point, method='haversine', return_dist=False)
+    nearest_node_info = G.nodes[nearest_node]
     neighbors = nx.all_neighbors(G, nearest_node)
     lines = []
     for i in neighbors:
-        current_node_info = G.node[i]
+        current_node_info = G.nodes[i]
         lines.append(
             [(current_node_info['y'], current_node_info['x']), (nearest_node_info['y'], nearest_node_info['x'])])
     projections = []
